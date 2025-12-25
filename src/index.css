@@ -1,0 +1,43 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-6xl: 120rem;
+}
+
+
+@layer base {
+  .navlink-active {
+    @apply text-blue-500;
+  }
+  .navlink-inactive {
+    @apply text-[#ffffd1] dark:text-white;
+  }
+
+  .navlink-inactive:hover {
+    @apply text-blue-500 dark:text-blue-500;
+  }
+
+  .btn{
+    @apply rounded px-4 py-1 cursor-pointer
+  }
+  .btn-primary{
+    @apply bg-blue-500 hover:bg-blue-400
+  }
+  .btn-success{
+    @apply bg-green-500 hover:bg-green-400
+  }
+
+
+}
