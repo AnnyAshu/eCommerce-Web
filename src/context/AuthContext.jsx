@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const AuthContext = createContext(null);
 
 const AuthContextWrapper = ({ children }) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
   const login = (userPrinciple) => {
     delete userPrinciple?.password;
     setUser({
@@ -15,7 +15,7 @@ const AuthContextWrapper = ({ children }) => {
     });
   };
   const logout = () => {
-    setUser({});
+    setUser(null);
   };
   return (
     <>

@@ -1,12 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
 import useAuth from "../../hooks/useAuth";
+import { useNavigate } from "react-router";
 
 const initState = {
   email: "",
   password: "",
 };
 const Login = () => {
+  const navigate = useNavigate();
   const { login } = useAuth();
   let [formData, setFormData] = useState(initState);
 
@@ -23,6 +25,7 @@ const Login = () => {
     login(formData);
     setFormData(initState);
     // POST API call in future
+    navigate("/dashboard");
   };
   return (
     <div className="login-root flex justify-center items-center">

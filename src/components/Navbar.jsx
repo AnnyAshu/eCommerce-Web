@@ -10,7 +10,7 @@ const Navbar = () => {
       {console.log(user)}
       <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
-          to="/useeffect"
+          to="/usememo"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src="vite.svg" className="h-7" alt="Flowbite Logo" />
@@ -18,7 +18,7 @@ const Navbar = () => {
             eCommerce
           </span>
         </Link>
-        {user.email ? (
+        {user != null ? (
           <UserMenu />
         ) : (
           <>
